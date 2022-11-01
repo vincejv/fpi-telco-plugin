@@ -16,26 +16,16 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.     *
  ******************************************************************************/
 
-package com.abavilla.fpi.meta.ext.dto.msgr.ext;
+package com.abavilla.fpi.telco;
 
-import java.util.List;
+import io.quarkus.logging.Log;
 
-import com.abavilla.fpi.fw.dto.AbsDto;
-import io.quarkus.runtime.annotations.RegisterForReflection;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+/**
+ * Main class for plugins
+ */
+public class TelcoPlugin {
 
-@Data
-@EqualsAndHashCode(callSuper = true)
-@NoArgsConstructor
-@RegisterForReflection
-public class MetaMsgEvtDto extends AbsDto {
-  private String sender;
-  private String recipient;
-  private String metaMsgId;
-  private String content;
-  private String replyTo;
-  private String timestamp;
-  private List<MetaMsgEvtAttchmtDto> attachments;
+  public static void main(String[] args) {
+    Log.debug("Telco Plugin");
+  }
 }

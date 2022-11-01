@@ -16,35 +16,12 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.     *
  ******************************************************************************/
 
-package com.abavilla.fpi.meta.ext.dto;
+package com.abavilla.fpi.telco.ext.util;
 
-import java.util.List;
+public class TelcoConst {
 
-import com.abavilla.fpi.fw.dto.AbsDto;
-import com.abavilla.fpi.meta.ext.dto.msgr.EntryDto;
-import io.quarkus.runtime.annotations.RegisterForReflection;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+  public static final String ATTCHMT_TYPE_TEMPLATE = "template";
 
-/**
- * Data transfer object containing the webhook from Meta's Facebook Messenger
- *
- * @author <a href="mailto:vincevillamora@gmail.com">Vince Villamora</a>
- */
-@Data
-@EqualsAndHashCode(callSuper = true)
-@NoArgsConstructor
-@RegisterForReflection
-public class MetaHookEvtDto extends AbsDto {
+  private TelcoConst() { }
 
-  /**
-   * Event type
-   */
-  private String object;
-
-  /**
-   * Event entries
-   */
-  private List<EntryDto> entry;
 }

@@ -5,8 +5,8 @@ on:
     types: [ opened, synchronize, reopened ]
 
 env:
-  GHUB_REPO_NAME: fpi-meta-plugin  # plugin name
-  SONAR_PROJECT_KEY: vincejv_fpi-meta-plugin
+  GHUB_REPO_NAME: fpi-telco-plugin  # plugin name
+  SONAR_PROJECT_KEY: vincejv_fpi-telco-plugin
 
 jobs:
 

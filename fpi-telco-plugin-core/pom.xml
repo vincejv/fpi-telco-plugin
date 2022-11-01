@@ -35,23 +35,23 @@
   </developers>
 
   <scm>
-    <url>https://github.com/vincejv/fpi-meta-plugin</url>
-    <connection>scm:git:git://github.com/vincejv/fpi-meta-plugin.git</connection>
-    <developerConnection>scm:git:git@github.com:vincejv/fpi-meta-plugin.git</developerConnection>
+    <url>https://github.com/vincejv/fpi-telco-plugin</url>
+    <connection>scm:git:git://github.com/vincejv/fpi-telco-plugin.git</connection>
+    <developerConnection>scm:git:git@github.com:vincejv/fpi-telco-plugin.git</developerConnection>
     <tag>HEAD</tag>
   </scm>
 
-  <name>FPI Meta plugin shared library</name>
-  <description>Plugin for FPI Framework to integrate with Meta Services</description>
-  <url>https://github.com/vincejv/fpi-meta-plugin</url>
+  <name>FPI Telco plugin core module</name>
+  <description>Plugin for FPI Framework to integrate with Telco services</description>
+  <url>https://github.com/vincejv/fpi-telco-plugin</url>
   <inceptionYear>2022</inceptionYear>
 
   <modelVersion>4.0.0</modelVersion>
-  <artifactId>fpi-meta-plugin-lib</artifactId>
+  <artifactId>fpi-telco-plugin-core</artifactId>
   <version>0</version>
   
   <parent>
-    <artifactId>fpi-meta-plugin</artifactId>
+    <artifactId>fpi-telco-plugin</artifactId>
     <groupId>com.abavilla</groupId>
     <version>0</version>
     <relativePath>../pom.xml</relativePath>

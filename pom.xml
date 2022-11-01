@@ -35,15 +35,15 @@
   </developers>
 
   <scm>
-    <url>https://github.com/vincejv/fpi-meta-plugin</url>
-    <connection>scm:git:git://github.com/vincejv/fpi-meta-plugin.git</connection>
-    <developerConnection>scm:git:git@github.com:vincejv/fpi-meta-plugin.git</developerConnection>
+    <url>https://github.com/vincejv/fpi-telco-plugin</url>
+    <connection>scm:git:git://github.com/vincejv/fpi-telco-plugin.git</connection>
+    <developerConnection>scm:git:git@github.com:vincejv/fpi-telco-plugin.git</developerConnection>
     <tag>HEAD</tag>
   </scm>
 
-  <name>FPI Meta plugin parent POM</name>
-  <description>Plugin for FPI Framework to integrate with Meta Services</description>
-  <url>https://github.com/vincejv/fpi-meta-plugin</url>
+  <name>FPI Telco plugin parent POM</name>
+  <description>Plugin for FPI Framework to integrate with Telco services</description>
+  <url>https://github.com/vincejv/fpi-telco-plugin</url>
   <inceptionYear>2022</inceptionYear>
   
   <parent>
@@ -53,13 +53,13 @@
   </parent>
 
   <modelVersion>4.0.0</modelVersion>
-  <artifactId>fpi-meta-plugin</artifactId>
+  <artifactId>fpi-telco-plugin</artifactId>
   <packaging>pom</packaging>
   <version>0</version>
 
   <modules>
-    <module>fpi-meta-plugin-lib</module>
-    <module>fpi-meta-plugin-core</module>
+    <module>fpi-telco-plugin-lib</module>
+    <module>fpi-telco-plugin-core</module>
   </modules>
 
   <properties>
