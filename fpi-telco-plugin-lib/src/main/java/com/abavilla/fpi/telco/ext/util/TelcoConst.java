@@ -20,8 +20,6 @@ package com.abavilla.fpi.telco.ext.util;
 
 public class TelcoConst {
 
-  public static final String ATTCHMT_TYPE_TEMPLATE = "template";
-
   private TelcoConst() { }
 
 }
