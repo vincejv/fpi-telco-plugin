@@ -23,11 +23,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.abavilla.fpi.fw.entity.enums.IBaseEnum;
+import com.abavilla.fpi.fw.util.FWConst;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.quarkus.runtime.annotations.RegisterForReflection;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import org.apache.commons.lang3.StringUtils;
 
 /**
  * Enum for storing the API Status from Rest call or response
@@ -38,14 +40,15 @@ import lombok.Getter;
 @AllArgsConstructor
 @RegisterForReflection
 public enum ApiStatus implements IBaseEnum {
-  DEL(1, "Delivered"),
-  UND(2, "Undelivered"),
-  ACK(8, "Acknowledged"),
-  INV(15, "Invalid"),
-  REJ(16, "Rejected"),
-  CREATED(200, "Created"),
-  UNKNOWN(-1, ""),
-  WAIT(-2, "Waiting");
+  DEL(1, 70000L, "SUCCESS", "Delivered"),
+  UND(2, null,null,"Undelivered"),
+  ACK(8, null, null, "Acknowledged"),
+  INV(15, 90000L, null, "Invalid"),
+  REJ(16, 90200L, "FAILED","Rejected"),
+  CREATED(200, null, null, "Created"),
+  DUPL(300, 90380L, null, "Duplicated"),
+  UNKNOWN(-1, null, null, FWConst.UNKNOWN_PREFIX),
+  WAIT(-2, null, null, "Waiting");
 
   /**
    * Ordinal id to enum mapping
@@ -61,6 +64,16 @@ public enum ApiStatus implements IBaseEnum {
    * The enum ordinal id
    */
   private final int id;
+
+  /**
+   * The DTOne status code
+   */
+  private final Long dtOneId;
+
+  /**
+   * The GlobeLabs response message
+   */
+  private final String glResp;
 
   /**
    * The enum value
@@ -86,6 +99,30 @@ public enum ApiStatus implements IBaseEnum {
    */
   public static ApiStatus fromId(int id) {
     return (ApiStatus) IBaseEnum.fromId(id, ENUM_MAP, UNKNOWN);
+  }
+
+  /**
+   * Creates an enum based from given a DTOne DVS status code
+   *
+   * @param dtStsId the status code
+   * @return the created enum
+   */
+  public static ApiStatus fromDtOne(int dtStsId) {
+    return (ApiStatus) ENUM_MAP.values().stream()
+      .filter(enumItem -> dtStsId == ((ApiStatus)enumItem).dtOneId).findAny()
+      .orElse(UNKNOWN);
+  }
+
+  /**
+   * Creates an enum based from given GlobeLabs status message
+   *
+   * @param glSts the status message
+   * @return the created enum
+   */
+  public static ApiStatus fromGL(String glSts) {
+    return (ApiStatus) ENUM_MAP.values().stream()
+      .filter(enumItem -> StringUtils.equals(glSts, ((ApiStatus)enumItem).glResp)).findAny()
+      .orElse(UNKNOWN);
   }
 
   /**
