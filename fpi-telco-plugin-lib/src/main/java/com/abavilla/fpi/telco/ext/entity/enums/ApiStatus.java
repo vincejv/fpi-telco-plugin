@@ -21,6 +21,7 @@ package com.abavilla.fpi.telco.ext.entity.enums;
 import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 import com.abavilla.fpi.fw.entity.enums.IBaseEnum;
 import com.abavilla.fpi.fw.util.FWConst;
@@ -107,10 +108,10 @@ public enum ApiStatus implements IBaseEnum {
    * @param dtStsId the status code
    * @return the created enum
    */
-  public static ApiStatus fromDtOne(int dtStsId) {
+  public static ApiStatus fromDtOne(Long dtStsId) {
     return (ApiStatus) ENUM_MAP.values().stream()
-      .filter(enumItem -> dtStsId == ((ApiStatus)enumItem).dtOneId).findAny()
-      .orElse(UNKNOWN);
+      .filter(enumItem -> Objects.equals(dtStsId, ((ApiStatus)enumItem).dtOneId))
+      .findAny().orElse(UNKNOWN);
   }
 
   /**
