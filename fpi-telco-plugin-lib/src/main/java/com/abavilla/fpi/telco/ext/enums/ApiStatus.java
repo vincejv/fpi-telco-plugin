@@ -16,7 +16,7 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.     *
  ******************************************************************************/
 
-package com.abavilla.fpi.telco.ext.entity.enums;
+package com.abavilla.fpi.telco.ext.enums;
 
 import java.util.EnumSet;
 import java.util.HashMap;
