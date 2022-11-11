@@ -19,7 +19,7 @@
 package com.abavilla.fpi.telco.ext.codec;
 
 import com.abavilla.fpi.fw.config.codec.AbsEnumCodec;
-import com.abavilla.fpi.telco.ext.entity.enums.Telco;
+import com.abavilla.fpi.telco.ext.enums.Telco;
 
 /**
  * MongoDB Codec for {@link Telco} enum.
