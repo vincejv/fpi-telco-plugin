@@ -49,17 +49,17 @@
   <parent>
     <groupId>com.abavilla</groupId>
     <artifactId>fpi-framework-pom</artifactId>
-    <version>1.4.1</version>
+    <version>1.5.4</version>
   </parent>
 
   <modelVersion>4.0.0</modelVersion>
-  <artifactId>fpi-telco-plugin</artifactId>
+  <artifactId>fpi-telco-plugin-parent</artifactId>
   <packaging>pom</packaging>
   <version>0</version>
 
   <modules>
-    <module>fpi-telco-plugin-lib</module>
-    <module>fpi-telco-plugin-core</module>
+    <module>lib</module>
+    <module>core</module>
   </modules>
 
   <properties>
@@ -76,19 +76,22 @@
     <plugins>
 
       <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
       </plugin>
 
       <plugin>
-        <groupId>org.jboss.jandex</groupId>
+        <groupId>io.smallrye</groupId>
         <artifactId>jandex-maven-plugin</artifactId>
       </plugin>
 
       <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
       </plugin>
 
       <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-failsafe-plugin</artifactId>
       </plugin>
 
