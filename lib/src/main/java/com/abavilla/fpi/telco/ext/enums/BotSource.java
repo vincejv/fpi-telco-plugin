@@ -27,6 +27,7 @@ public enum BotSource implements IBaseEnum {
   LINE(9, "Line"),
   KIK(10, "Kik"),
   IMESSAGE(11, "iMessage"),
+  SMS(12, "Regular SMS"),
   UNKNOWN(-1, FWConst.UNKNOWN_PREFIX);
 
   /**
