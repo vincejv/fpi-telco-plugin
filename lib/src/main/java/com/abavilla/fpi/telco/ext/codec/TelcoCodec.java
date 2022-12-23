@@ -18,7 +18,7 @@
 
 package com.abavilla.fpi.telco.ext.codec;
 
-import com.abavilla.fpi.fw.config.codec.AbsEnumCodec;
+import com.abavilla.fpi.fw.codec.AbsEnumCodec;
 import com.abavilla.fpi.telco.ext.enums.Telco;
 
 /**
